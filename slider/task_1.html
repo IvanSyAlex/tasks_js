@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="slider">
+        <a class="left">&larr;</a>
+        <div class="block">
+            <ul class="list">
+                <li class="item">1</li>
+                <li class="item">2</li>
+                <li class="item">3</li>
+                <li class="item">4</li>
+                <li class="item">5</li>
+                <li class="item">6</li>
+                <li class="item">7</li>
+                <li class="item">8</li>
+                <li class="item">9</li>
+            </ul>
+        </div> 
+        <a class="right">&rarr;</a>
+    </div>
+    <script>
+        let butLeft = document.querySelector('.left');
+        let butRight = document.querySelector('.right');
+        let list = document.querySelector('.list');
+        let cur = 1;
+
+        butLeft.addEventListener('click',function moving(){
+            if(cur<6){
+                list.style.left = (cur * 100) * (-1) +'px';
+                cur++;
+                butRight.style.color = 'blue'
+            }else{
+                butLeft.style.color = 'red'
+            }
+        });
+
+        butRight.addEventListener('click',function moving(){
+            if(cur>1){
+                cur--;
+                list.style.left = (cur * 100 - 100) * (-1)  +'px';                
+                butLeft.style.color = 'blue'
+            }else{
+                butRight.style.color = 'red'
+            }
+        });
+        
+    </script>
+        
+</body>
+</html>
