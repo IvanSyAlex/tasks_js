@@ -28,12 +28,12 @@
         let butLeft = document.querySelector('.left');
         let butRight = document.querySelector('.right');
         let list = document.querySelector('.list');
-        let cur = 1;
+        let cur = 0;
 
         butLeft.addEventListener('click',function moving(){
-            if(cur<6){
-                list.style.left = (cur * 100) * (-1) +'px';
-                cur++;
+            if(cur>-500){
+                cur-=100;
+                list.style.left = cur +'px';
                 butRight.style.color = 'blue'
             }else{
                 butLeft.style.color = 'red'
@@ -41,9 +41,9 @@
         });
 
         butRight.addEventListener('click',function moving(){
-            if(cur>1){
-                cur--;
-                list.style.left = (cur * 100 - 100) * (-1)  +'px';                
+            if(cur<0){
+                cur+=100;
+                list.style.left = cur+'px';                
                 butLeft.style.color = 'blue'
             }else{
                 butRight.style.color = 'red'
