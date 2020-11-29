@@ -1,0 +1,53 @@
+p{
+    width: 800px;
+}
+.btn{
+    margin: 0 400px;
+    background: cornflowerblue;
+    padding: 10px;
+    border-radius: 5%;
+    border: 0;
+}
+.btn:active{
+    outline: none;
+}
+.btn:focus{
+    outline: none;
+}
+.overlay{
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: grey;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0.8;
+z-index: 1000;
+}
+
+.container{
+    width: 200px;
+    padding: 10px;
+    color: honeydew;
+    background: black;
+    border-radius: 12px;
+    position: relative;
+}
+
+.close-btn{
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    line-height: 15px;
+    right: 5px;
+    top: -10px;
+    text-decoration: none;
+}
